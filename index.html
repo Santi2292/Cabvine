@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CabVine · Travel Experiences</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" href="assets/images/Logos/IconoPagina.png" />
+  <link rel="stylesheet" href="assets/styles/index.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div id="gtEl" style="display:none"></div>
+  <header class="nav">
+    <div class="nav__wrap">
+      <a class="brand" href="#home" data-scrollto>
+        <img src="assets/images/Logos/CabvineWhite.png" alt="CabVine" />
+      </a>
+
+      <nav class="nav__links" aria-label="primary">
+        <a href="#home" data-i18n="nav_home" data-scrollto>Inicio</a>
+        <a href="#about" data-i18n="nav_about" data-scrollto>Nosotros</a>
+        <a href="#packages" data-i18n="nav_packages" data-scrollto>Experiencias</a>
+        <a href="#reviews" data-scrollto>Opiniones</a>
+        <a href="#contact" data-i18n="nav_contact" data-scrollto>Contacto</a>
+      </nav>
+
+      <div class="nav__actions">
+        <div class="lang" id="langToggle" aria-haspopup="listbox" aria-expanded="false">
+          <span id="langLabel">ESP</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 10l5 5 5-5z"></path>
+          </svg>
+          <ul class="lang__menu" id="langMenu" role="listbox" aria-label="Cambiar idioma">
+            <li role="option" data-lang="es">ESP</li>
+            <li role="option" data-lang="en">ENG</li>
+            <li role="option" data-lang="pt">POR</li>
+          </ul>
+        </div>
+        <button class="hamburger" id="btnHamburger" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="drawer" id="drawer" aria-label="mobile">
+      <a href="#home" data-i18n="nav_home" data-scrollto>Inicio</a>
+      <a href="#about" data-i18n="nav_about" data-scrollto>Nosotros</a>
+      <a href="#packages" data-i18n="nav_packages" data-scrollto>Experiencias</a>
+      <a href="#reviews" data-scrollto>Opiniones</a>
+      <a href="#contact" data-i18n="nav_contact" data-scrollto>Contacto</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero" aria-label="Hero">
+    <div class="hero__bg">
+      <div class="hero__slide is-active"><img class="hero__img" src="assets/images/hero/heroPicture.jpg"
+          alt="Mendoza 1"></div>
+      <div class="hero__slide"><img class="hero__img" src="assets/images/hero/heroPicture2.jpg" alt="Mendoza 2"></div>
+      <div class="hero__slide"><img class="hero__img" src="assets/images/hero/heroPicture3.jpg" alt="Mendoza 3"></div>
+      <div class="hero__slide"><img class="hero__img" src="assets/images/hero/heroPicture4.jpg" alt="Mendoza 4"></div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content" data-animate="up">
+      <h1 data-i18n="hero_title">Enoturismo boutique y Andes a tu medida</h1>
+      <p data-i18n="hero_sub">Traslados privados, degustaciones guiadas y aventuras escénicas en Mendoza.</p>
+      <a href="#packages" class="btn btn--primary" data-i18n="hero_cta" data-scrollto>Ver paquetes</a>
+      <div class="hero__chips">
+        <span class="chip">Mendoza</span><span class="chip">Cordillera</span><span class="chip">Enoturismo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about section">
+    <div class="section__head" data-animate="up">
+      <h2 data-i18n="about_title">Quiénes somos</h2>
+      <p class="muted" data-i18n="about_blurb">
+        En CabVine nos especializamos en enoturismo, combinando visitas a bodegas boutique, degustaciones personalizadas
+        y recorridos por viñedos con paisajes que enamoran. Pero también llevamos a nuestros viajeros más allá de la
+        copa: exploramos la majestuosidad de la cordillera de los Andes, la inmensidad de Villavicencio, los secretos de
+        Mendoza y mucho más.
+      </p>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__card glass" data-animate="up">
+        <div class="about__img"><img src="assets/images/QuienesSomos/quienesSomos1.png"
+            alt="Enoturismo boutique — viñedos y cordillera" loading="lazy" decoding="async"></div>
+        <div class="about__text">
+          <h3>Enoturismo boutique</h3>
+          <p>Bodegas seleccionadas, degustaciones guiadas y viñedos con vistas a la cordillera.</p>
+          <ul class="about__list">
+            <li>Sommelier-host en español/inglés/portugués</li>
+            <li>Degustaciones premium y maridajes</li>
+            <li>Traslados privados con chofer</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about__card glass" data-animate="up">
+        <div class="about__img"><img src="assets/images/QuienesSomos/quienesSomos2.jpg"
+            alt="Andes y aventura — alta montaña, termas y rutas panorámicas" loading="lazy" decoding="async"></div>
+        <div class="about__text">
+          <h3>Andes & aventura</h3>
+          <p>Alta montaña, termas y caminos panorámicos para todos los niveles.</p>
+          <ul class="about__list">
+            <li>Valle de Uco, Potrerillos, Aconcagua</li>
+            <li>City tours privados y walking tours</li>
+            <li>E-bikes, velero y globo aerostático</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about__card glass" data-animate="up">
+        <div class="about__img"><img src="assets/images/QuienesSomos/quienesSomos3.jpg"
+            alt="Experiencias a medida — flexibles y en tu idioma" loading="lazy" decoding="async"></div>
+        <div class="about__text">
+          <h3>Hecho a medida</h3>
+          <p>Itinerarios flexibles, trato cercano y soporte en tu idioma.</p>
+          <ul class="about__list">
+            <li>Diseño 100% personalizado</li>
+            <li>Atención ágil por WhatsApp en tu idioma</li>
+            <li>Traslados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section id="brands" class="brands section--tight" aria-label="Partners">
+    <div class="brands__wrap">
+      <div class="brands__hint">Afiliados & bodegas</div>
+      <div class="brands__viewport" id="brandsViewport">
+        <div class="brands__track" id="brandsTrack"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="reviews section">
+    <div class="section__head" data-animate="up">
+      <h2>Opiniones de TripAdvisor</h2>
+      <p class="muted">Lo que dicen los viajeros.</p>
+    </div>
+    <div class="rv-viewport" id="rvViewport" data-animate="up" aria-live="polite">
+      <div class="rv-track" id="rvTrack"></div>
+    </div>
+    <div class="metrics metrics--reviews" id="reviewsMetrics" data-animate="up">
+      <div class="metric"><strong id="mRating">5.0★</strong><span>Puntuación</span></div>
+      <div class="metric"><strong id="mAllies">0+</strong><span>Bodegas aliadas</span></div>
+      <div class="metric"><strong>3</strong><span>Idiomas</span></div>
+    </div>
+    <div class="section__cta reviews__cta" data-animate="up">
+      <a class="btn btn--primary"
+        href="https://www.tripadvisor.com.ar/Attraction_Review-g312781-d33338895-Reviews-CabVine_Travel_Experiences-Mendoza_Province_of_Mendoza_Cuyo.html"
+        target="_blank" rel="noopener">Ver más en TripAdvisor</a>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section id="packages" class="packages section section--altbg">
+    <div class="section__head" data-animate="up">
+      <h2>Paquetes destacados</h2>
+      <p class="muted">Siete propuestas curadas. Todo incluido y con traslados.</p>
+    </div>
+
+    <div class="cards" role="list">
+      <article class="card" role="listitem" data-animate="fade">
+        <figure class="card__media">
+          <img class="card__img" src="assets/images/Bodegas Lujan de cuyo/lujanMain.jpg" alt="Luján Clásica/Deluxe"
+            loading="lazy" decoding="async">
+        </figure>
+        <div class="card__body">
+          <div class="card__head">
+            <h3>Luján Clásica/Deluxe</h3><span class="badge">Vinos</span>
+          </div>
+          <p class="card__desc">Budeguer + Piatelli / De Ángeles + Sottano. Degustaciones premium y almuerzo.</p>
+          <div class="card__meta"><span class="price">USD 150–200</span><span class="dot">•</span><span class="tag">Full
+              day</span></div>
+          <div class="card__actions">
+            <button class="btn btn--ghost" data-more="1">Más info</button>
+            <a class="btn btn--soft" href="https://wa.me/5492616148328" target="_blank">Reservar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-animate="fade">
+        <figure class="card__media">
+          <img class="card__img" src="assets/images/Bodegas Maipú/Bodegas Maipú/maipuMain.JPG"
+            alt="Maipú Clásica/Deluxe" loading="lazy" decoding="async">
+        </figure>
+        <div class="card__body">
+          <div class="card__head">
+            <h3>Maipú Clásica/Deluxe</h3><span class="badge">Vinos</span>
+          </div>
+          <p class="card__desc">Cinco Sentidos + Tempus Alba / El Enemigo + Alandes.</p>
+          <div class="card__meta"><span class="price">USD 150–200</span><span class="dot">•</span><span class="tag">Full
+              day</span></div>
+          <div class="card__actions">
+            <button class="btn btn--ghost" data-more="2">Más info</button>
+            <a class="btn btn--soft" href="https://wa.me/5492616148328" target="_blank">Reservar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-animate="fade">
+        <figure class="card__media">
+          <img class="card__img" src="assets/images/Bodegas Valle de Uco/Bodegas Valle de Uco/valleDeUcoMain.jpg"
+            alt="Valle de Uco Clásica/Deluxe" loading="lazy" decoding="async">
+        </figure>
+        <div class="card__body">
+          <div class="card__head">
+            <h3>Valle de Uco Clásica/Deluxe</h3><span class="badge">Vinos</span>
+          </div>
+          <p class="card__desc">Zaina + Tupungato Divino / Rolland + Tikal.</p>
+          <div class="card__meta"><span class="price">USD 150–200</span><span class="dot">•</span><span class="tag">Full
+              day</span></div>
+          <div class="card__actions">
+            <button class="btn btn--ghost" data-more="3">Más info</button>
+            <a class="btn btn--soft" href="https://wa.me/5492616148328" target="_blank">Reservar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-animate="fade">
+        <figure class="card__media">
+          <img class="card__img" src="assets/images/Alta Montaña/altaMontañaMain.jpg" alt="Alta Montaña" loading="lazy"
+            decoding="async">
+        </figure>
+        <div class="card__body">
+          <div class="card__head">
+            <h3>Alta Montaña</h3><span class="badge">Andes</span>
+          </div>
+          <p class="card__desc">Cacheuta · Potrerillos · Uspallata · Puente del Inca · Aconcagua.</p>
+          <div class="card__meta"><span class="price">USD 125</span><span class="dot">•</span><span class="tag">Full
+              day</span></div>
+          <div class="card__actions">
+            <button class="btn btn--ghost" data-more="4">Más info</button>
+            <a class="btn btn--soft" href="https://wa.me/5492616148328" target="_blank">Reservar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-animate="fade">
+        <figure class="card__media">
+          <img class="card__img" src="assets/images/Villavicencio/villavicencioMain.jpg" alt="Reserva Villavicencio"
+            loading="lazy" decoding="async">
+        </figure>
+        <div class="card__body">
+          <div class="card__head">
+            <h3>Reserva Villavicencio</h3><span class="badge">Naturaleza</span>
+          </div>
+          <p class="card__desc">Hotel, jardines, capilla y centro de interpretación.</p>
+          <div class="card__meta"><span class="price">USD 85</span><span class="dot">•</span><span class="tag">Half
+              day</span></div>
+          <div class="card__actions">
+            <button class="btn btn--ghost" data-more="5">Más info</button>
+            <a class="btn btn--soft" href="https://wa.me/5492616148328" target="_blank">Reservar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-animate="fade">
+        <figure class="card__media">
+          <img class="card__img" src="assets/images/City Tour/City Tour/cityTourMain.jpg" alt="City Tour" loading="lazy"
+            decoding="async">
+        </figure>
+        <div class="card__body">
+          <div class="card__head">
+            <h3>City Tour</h3><span class="badge">Urbano</span>
+          </div>
+          <p class="card__desc">Plazas, Parque San Martín y Cerro de la Gloria.</p>
+          <div class="card__meta"><span class="price">USD 40</span><span class="dot">•</span><span class="tag">Half
+              day</span></div>
+          <div class="card__actions">
+            <button class="btn btn--ghost" data-more="6">Más info</button>
+            <a class="btn btn--soft" href="https://wa.me/5492616148328" target="_blank">Reservar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" role="listitem" data-animate="fade">
+        <figure class="card__media">
+          <img class="card__img" src="assets/images/Aventura/Aventura/aventuraMain.jpg" alt="Mendoza Aventura"
+            loading="lazy" decoding="async">
+        </figure>
+        <div class="card__body">
+          <div class="card__head">
+            <h3>Mendoza Aventura</h3><span class="badge">Multi</span>
+          </div>
+          <p class="card__desc">E-bikes, bodegas en bici, velero, globo aerostático.</p>
+          <div class="card__meta"><span class="price">USD 200</span><span class="dot">•</span><span
+              class="tag">Multi</span></div>
+          <div class="card__actions">
+            <button class="btn btn--ghost" data-more="7">Más info</button>
+            <a class="btn btn--soft" href="https://wa.me/5492616148328" target="_blank">Reservar</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="section__cta" data-animate="up">
+      <a class="btn btn--primary" href="#contact" data-i18n="see_all" data-scrollto>Consultar más opciones</a>
+    </div>
+  </section>
+
+  <!-- WINE MAP -->
+  <section id="winemap" class="section">
+    <div class="section__head" data-animate="up">
+      <h2>Wine Map</h2>
+      <p class="muted">Descubrí las regiones mendocinas y qué vivir en cada una.</p>
+    </div>
+
+    <div class="winemap__wrap">
+      <figure class="wm-figure" aria-label="Mapa de Mendoza">
+        <img src="assets/images/Logos/wineMap.jpg" alt="Wine Map Mendoza" loading="lazy" decoding="async">
+        <button class="wm-dot" style="--x:38%;--y:24%" data-id="norte" aria-label="Norte mendocino"></button>
+        <button class="wm-dot" style="--x:31%;--y:28%" data-id="lujan" aria-label="Luján de Cuyo"></button>
+        <button class="wm-dot" style="--x:46%;--y:34%" data-id="maipu" aria-label="Maipú"></button>
+        <button class="wm-dot" style="--x:29%;--y:38%" data-id="uco" aria-label="Valle de Uco"></button>
+        <button class="wm-dot" style="--x:48%;--y:53%" data-id="sur" aria-label="Sur mendocino"></button>
+      </figure>
+
+      <aside class="wm-info" id="wmInfo" aria-live="polite">
+        <h3 class="wm-title">Luján de Cuyo</h3>
+        <div class="wm-body">
+          <div>
+            <strong>Región & experiencia</strong><br>
+            Cuna del Malbec argentino. Vinos elegantes, taninos suaves.
+          </div>
+          <div>
+            <strong>Atracciones</strong>
+            <ul>
+              <li>Bodegas boutique y tradicionales</li>
+            </ul>
+          </div>
+          <div>
+            <strong>Bodegas que visitamos</strong>
+            <ul>
+              <li>Budeguer, Piatelli · De Ángeles, Sottano</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contact" class="contact section">
+    <div class="section__head section__head--light" data-animate="up">
+      <h2>Contacto</h2>
+      <p class="muted">Respondemos en menos de 24 hs.</p>
+    </div>
+
+    <div class="contact__grid">
+      <a class="contact__tile glass contact__tile--onbrand"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=info@cabvinetravel.com&su=Consulta%20CabVine&body=Hola%20CabVine%2C%0A"
+        target="_blank" rel="noopener" data-animate="up" aria-label="Email">
+        <div class="contact__text"><span>Email</span><strong>info@cabvinetravel.com</strong></div>
+        <img class="contact__icon" src="assets/images/Logos/email.png" alt="Email">
+      </a>
+
+      <a class="contact__tile glass contact__tile--onbrand" href="https://wa.me/5492616148328" target="_blank"
+        data-animate="up" aria-label="WhatsApp">
+        <div class="contact__text"><span>WhatsApp</span><strong>+54 9 261 614-8328</strong></div>
+        <img class="contact__icon" src="assets/images/Logos/whatsapp.png" alt="WhatsApp">
+      </a>
+
+      <a class="contact__tile glass contact__tile--onbrand" href="https://www.instagram.com/cabvine.travel/"
+        target="_blank" data-animate="up" aria-label="Instagram">
+        <div class="contact__text"><span>Instagram</span><strong>@cabvine.travel</strong></div>
+        <img class="contact__icon" src="assets/images/Logos/instagram.png" alt="Instagram">
+      </a>
+
+      <a class="contact__tile glass contact__tile--onbrand"
+        href="https://www.tripadvisor.com.ar/Attraction_Review-g312781-d33338895-Reviews-CabVine_Travel_Experiences-Mendoza_Province_of_Mendoza_Cuyo.html"
+        target="_blank" data-animate="up" aria-label="TripAdvisor">
+        <div class="contact__text"><span>TripAdvisor</span><strong>CabVine</strong></div>
+        <img class="contact__icon" src="assets/images/Logos/tripadvisor.png" alt="TripAdvisor">
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p id="copyright">Copyright © 2025 | All Rights Reserved | CabVine Travel Experiences</p>
+  </footer>
+
+  <!-- MODAL -->
+  <dialog id="modal" class="m">
+    <div class="m__box" role="document" aria-labelledby="mTitle">
+      <button class="m__close" id="mClose" aria-label="Cerrar">×</button>
+
+      <div class="m__grid">
+        <section class="m__media">
+          <figure class="m__main">
+            <img id="mMain" alt="Imagen del paquete">
+            <button class="m__nav m__nav--prev" id="mPrev" aria-label="Anterior">‹</button>
+            <button class="m__nav m__nav--next" id="mNext" aria-label="Siguiente">›</button>
+          </figure>
+          <div class="m__thumbs" id="mThumbs" aria-label="Galería"></div>
+        </section>
+
+        <aside class="m__info" id="mInfo">
+          <small id="mKicker" class="m__kicker">FULL DAY</small>
+          <h3 id="mTitle" class="m__title">Título</h3>
+
+          <div class="m__row" id="mRow">
+            <div class="m__price" id="mPrice">
+              <span class="m__amount">USD 000</span>
+              <span class="m__caption" id="mCaption">por persona</span>
+            </div>
+
+            <div class="m__switch" id="mSwitch" hidden>
+              <button type="button" class="m__opt is-active" data-variant="classic">Clásica</button>
+              <button type="button" class="m__opt" data-variant="deluxe">Deluxe</button>
+              <span class="m__switchThumb"></span>
+            </div>
+          </div>
+
+          <div class="m__section">
+            <div class="m__h4">Recorrido</div>
+            <div class="m__text" id="mItinerary"></div>
+          </div>
+
+          <div class="m__perks" id="mPerks" aria-label="Incluye"></div>
+
+          <div class="m__section" id="mExtrasWrap" hidden>
+            <div class="m__h4">Opciones adicionales</div>
+            <ul class="m__bullets" id="mExtras"></ul>
+          </div>
+
+          <a class="btn btn--primary m__cta" id="mCTA" target="_blank" href="https://wa.me/5492616148328">Reservar</a>
+        </aside>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="assets/js/index.js" defer></script>
+</body>
+
+</html>
