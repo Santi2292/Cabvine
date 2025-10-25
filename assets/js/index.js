@@ -188,26 +188,26 @@ let BRANDS = [...DEFAULT_BRANDS];
       const d = await r.json();
       if (Array.isArray(d) && d.length) BRANDS = d;
     }
-  } catch {}
+  } catch { }
   renderBrandLogos();
   last = performance.now();
   requestAnimationFrame(tick);
   updateAlliesMetric();
 })();
 
-const EXT = ['.png','.PNG','.jpg','.JPG','.jpeg','.JPEG','.webp','.WEBP','.svg','.SVG'];
-const BASES = ['assets/images/Bodegas y Afiliados/','assets/images/brands/svg/','assets/images/brands/'];
+const EXT = ['.png', '.PNG', '.jpg', '.JPG', '.jpeg', '.JPEG', '.webp', '.WEBP', '.svg', '.SVG'];
+const BASES = ['assets/images/Bodegas y Afiliados/', 'assets/images/brands/svg/', 'assets/images/brands/'];
 const norm = s => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 const variants = n => {
   const s = String(n || '');
   const base = [s, norm(s)];
   const x = new Set();
   base.forEach(v => {
-    const v1 = v, v2 = v.replace(/\s+/g,'-'), v3 = v.replace(/\s+/g,'_'), v4 = v.replace(/\s+/g,'');
+    const v1 = v, v2 = v.replace(/\s+/g, '-'), v3 = v.replace(/\s+/g, '_'), v4 = v.replace(/\s+/g, '');
     [v1, v1.toLowerCase(), v1.toUpperCase(),
-     v2, v2.toLowerCase(), v2.toUpperCase(),
-     v3, v3.toLowerCase(), v3.toUpperCase(),
-     v4, v4.toLowerCase(), v4.toUpperCase()].forEach(z => x.add(z));
+      v2, v2.toLowerCase(), v2.toUpperCase(),
+      v3, v3.toLowerCase(), v3.toUpperCase(),
+      v4, v4.toLowerCase(), v4.toUpperCase()].forEach(z => x.add(z));
   });
   return [...x];
 };
@@ -269,9 +269,9 @@ function highlightCenter() {
   });
   qsa('.brandLogo', brandsTrack).forEach(el => el.classList.toggle('is-center', el === best));
 }
-function updateAlliesMetric() {
+/* function updateAlliesMetric() {
   const el = qs('#mAllies'); if (el) el.textContent = String(BRANDS.length) + '+';
-}
+} */
 
 /* ====================== REVIEWS slider ====================== */
 (function () {
@@ -500,9 +500,9 @@ const PKG_IMGS = {
 };
 
 const WINERIES = {
-  1: { classic: ['Budeguer','Piatelli'], deluxe: ['De Ángeles','Sottano'] },
-  2: { classic: ['Cinco Sentidos','Tempus Alba'], deluxe: ['Casa Vigil - El Enemigo','Alandes'] },
-  3: { classic: ['Zaina','Tupungato Divino'], deluxe: ['Rolland','Tikal'] }
+  1: { classic: ['Budeguer', 'Piatelli'], deluxe: ['De Ángeles', 'Sottano'] },
+  2: { classic: ['Cinco Sentidos', 'Tempus Alba'], deluxe: ['Casa Vigil','El Enemigo', 'Alandes'] },
+  3: { classic: ['Zaina', 'Tupungato Divino'], deluxe: ['Rolland', 'Tikal'] }
 };
 
 /* ======= CONTENIDO AMPLIADO ======= */
@@ -514,18 +514,18 @@ const CONTENT = {
       classic: {
         price: 'USD 150', caption: 'por persona en base doble (todo incluido)',
         itinerary:
-`10:45 Salida del hotel
+          `10:45 Salida del hotel
 11:30 Visita y degustación en Bodega Budeguer
 13:30 Almuerzo de pasos en Bodega Piatelli`,
-        perks: ['Traslados privados','Degustaciones guiadas','Almuerzo de pasos']
+        perks: ['Traslados privados', 'Degustaciones guiadas', 'Almuerzo de pasos']
       },
       deluxe: {
         price: 'USD 200', caption: 'por persona en base doble (todo incluido)',
         itinerary:
-`09:20 Salida del hotel
+          `09:20 Salida del hotel
 10:00 Visita y degustación en Bodega De Ángeles
 13:00 Almuerzo de pasos en Bodega Sottano`,
-        perks: ['Traslados privados','Degustaciones premium','Almuerzo de pasos']
+        perks: ['Traslados privados', 'Degustaciones premium', 'Almuerzo de pasos']
       }
     }
   },
@@ -536,18 +536,18 @@ const CONTENT = {
       classic: {
         price: 'USD 150', caption: 'por persona en base doble (todo incluido)',
         itinerary:
-`09:20 Salida del hotel
+          `09:20 Salida del hotel
 10:00 Visita y degustación en Bodega Cinco Sentidos
 13:30 Almuerzo de pasos en Bodega Tempus Alba`,
-        perks: ['Traslados privados','Degustaciones guiadas','Almuerzo de pasos']
+        perks: ['Traslados privados', 'Degustaciones guiadas', 'Almuerzo de pasos']
       },
       deluxe: {
         price: 'USD 200', caption: 'por persona en base doble (todo incluido)',
         itinerary:
-`10:50 Salida del hotel
+          `10:50 Salida del hotel
 11:30 Visita y degustación en Casa Vigil – El Enemigo
 13:30 Almuerzo de pasos en Bodega Alandes (Karim Mussi)`,
-        perks: ['Traslados privados','Degustaciones premium','Almuerzo de pasos']
+        perks: ['Traslados privados', 'Degustaciones premium', 'Almuerzo de pasos']
       }
     }
   },
@@ -558,18 +558,18 @@ const CONTENT = {
       classic: {
         price: 'USD 150', caption: 'por persona en base doble (todo incluido)',
         itinerary:
-`08:30 Salida del hotel
+          `08:30 Salida del hotel
 10:00 Visita y degustación en Bodega Zaina (Familia Zaina)
 12:30 Almuerzo de pasos en Tupungato Divino`,
-        perks: ['Traslados privados','Degustaciones guiadas','Almuerzo de pasos']
+        perks: ['Traslados privados', 'Degustaciones guiadas', 'Almuerzo de pasos']
       },
       deluxe: {
         price: 'USD 200', caption: 'por persona en base doble (todo incluido)',
         itinerary:
-`08:15 Salida aprox. del hotel
+          `08:15 Salida aprox. del hotel
 10:00 Visita y degustación en Bodega Rolland
 12:00 Experiencia biodinámica con almuerzo en Bodega Tikal (Ernesto Catena)`,
-        perks: ['Traslados privados','Degustaciones premium','Almuerzo con experiencia biodinámica']
+        perks: ['Traslados privados', 'Degustaciones premium', 'Almuerzo con experiencia biodinámica']
       }
     }
   },
@@ -579,11 +579,11 @@ const CONTENT = {
     single: {
       price: 'USD 125', caption: 'por persona en base doble (desde)',
       itinerary:
-`08:30 Salida del hotel
+        `08:30 Salida del hotel
 Recorrido panorámico aprox. 400 km (ida y vuelta)
 Cacheuta • Potrerillos • Valle de Uspallata • Polvaredas • Penitentes (centro de esquí) • Puente del Inca • Parque Provincial Aconcagua`,
-      perks: ['Traslados privados','Paradas fotográficas'],
-      extras: ['Ski day','Cristo Redentor (según temporada/condiciones)']
+      perks: ['Traslados privados', 'Paradas fotográficas'],
+      extras: ['Ski day', 'Cristo Redentor (según temporada/condiciones)']
     }
   },
   5: {
@@ -592,27 +592,26 @@ Cacheuta • Potrerillos • Valle de Uspallata • Polvaredas • Penitentes (c
     single: {
       price: 'USD 85', caption: 'por persona en base doble',
       itinerary:
-`Recorrido panorámico aprox. 110 km (ida y vuelta)
+        `Recorrido panorámico aprox. 110 km (ida y vuelta)
 Monumento Histórico Canota • Centro de Interpretación de la Reserva
 Hotel Villavicencio + jardines y capilla (visita guiada)
 Pequeña colación en el antiguo lobby del hotel antes del regreso`,
-      perks: ['Traslados privados','Visita guiada','Colación incluida'],
-      extras: ['Arborismo','Tirolesa']
+      perks: ['Traslados privados', 'Visita guiada', 'Colación incluida'],
+      extras: ['Arborismo', 'Tirolesa']
     }
   },
   6: {
-    title: 'City Tour Privado / Walking City Tour',
+    title: 'City Tour Privado',
     kicker: 'HALF DAY',
     single: {
-      price: 'USD 40', caption: 'City Tour privado (por persona en base doble)',
+      price: 'Desde USD 40', caption: 'City Tour privado (por persona en base doble)',
       itinerary:
-`Recorrido por los principales atractivos:
-Área Fundacional • Plazas (San Martín, Chile, España, Italia, Independencia)
-Parque General San Martín (con pequeña colación) • Cerro de la Gloria (historia del monumento)`,
-      perks: ['Traslados privados','Paradas fotográficas','Colación en Parque San Martín'],
+        `Recorrido turístico por los principales atractivos de la ciudad de Mendoza, incluyen la zona del Área Fundacional, principales plazas y avenidas (Plaza San Martín, Plaza Chile, Plaza España, Plaza Italia y Plaza Independencia), Parque General San Martín y terminaremos en el Cerro de la Gloria, donde podremos apreciar la historia del monumento “La Patria al Ejército de Los Andes”
+`,
+      perks: ['Traslados privados', 'Paradas fotográficas', 'Colación en Parque San Martín'],
       extras: [
-        'Walking City Tour — USD 25 p/p (base doble)',
-        'Ruta a pie: Plaza Independencia (encuentro) • Peatonal Sarmiento • Plaza España • Pasaje San Martín • Plaza San Martín • Av. Las Heras'
+        'Opciones adicionales: Walking City tour: desde USD 25 por persona. Punto de encuentro en Plaza Idependencia. Se recorre la Peatonal Sarmiento, principales Plazas, Pasaje San Martín y avenidas principales.',
+
       ]
     }
   },
@@ -620,9 +619,9 @@ Parque General San Martín (con pequeña colación) • Cerro de la Gloria (hist
     title: 'Experiencias de Aventura',
     kicker: 'MULTI',
     single: {
-      price: 'USD 200', caption: 'por persona en base doble (según actividad)',
-      itinerary:`Elegí tu experiencia (sujeta a disponibilidad y clima):`,
-      perks: ['Traslados/vehículo de asistencia (según actividad)','Guía especializado'],
+      price: 'Desde USD 170', caption: 'por persona en base doble (según actividad)',
+      itinerary: `Elegí tu experiencia (sujeta a disponibilidad y clima):`,
+      perks: ['Traslados/vehículo de asistencia (según actividad)', 'Guía especializado'],
       extras: [
         'Travesía E-bikes en Potrerillos — USD 200 p/p: Cacheuta + Dique Potrerillos, vistas a Precordillera y Cordón del Plata. Adaptada al nivel, con vehículo de asistencia y paradas estratégicas.',
         'Paseo en bici por bodegas — USD 170 p/p: Chacras de Coria → visita Alta Vista Wines → Vistalba → Rincón Gieco con almuerzo descontracturado (snacks/salsas/sandwiches o picada). Incluye asistencia, pick-up y drop-off.',
@@ -749,11 +748,11 @@ function pathVariants(p) {
   const variants = new Set();
   const push = s => s && variants.add(s);
   push(p);
-  push(p.replace(/ñ/g,'n').replace(/Ñ/g,'N'));
-  const deaccent = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  push(p.replace(/ñ/g, 'n').replace(/Ñ/g, 'N'));
+  const deaccent = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   push(deaccent(p));
-  push(p.replace(/\/{2,}/g,'/'));
-  push(p.replace(/\.jpg$/i,'.JPG')); push(p.replace(/\.jpeg$/i,'.JPEG')); push(p.replace(/\.png$/i,'.PNG'));
+  push(p.replace(/\/{2,}/g, '/'));
+  push(p.replace(/\.jpg$/i, '.JPG')); push(p.replace(/\.jpeg$/i, '.JPEG')); push(p.replace(/\.png$/i, '.PNG'));
   return [...variants];
 }
 function loadWithFallback(imgEl, paths) {
@@ -767,7 +766,7 @@ function loadWithFallback(imgEl, paths) {
 }
 
 /* ======= WINE MAP ======= */
-(function(){
+(function () {
   const root = document.querySelector('#winemap');
   if (!root) return;
   const figure = root.querySelector('.wm-figure');
@@ -777,45 +776,45 @@ function loadWithFallback(imgEl, paths) {
   const INFO = {
     norte: {
       title: "Norte mendocino",
-      region: ["Zona urbana y rural (Las Heras, Guaymallén, Lavalle).","Estilo joven y frutado; también blancos y base para espumosos."],
-      atracciones: ["Bodegas tradicionales y viñedos cercanos al Gran Mendoza","Acceso a precordillera y circuitos panorámicos cortos"]
+      region: ["Zona urbana y rural (Las Heras, Guaymallén, Lavalle).", "Estilo joven y frutado; también blancos y base para espumosos."],
+      atracciones: ["Bodegas tradicionales y viñedos cercanos al Gran Mendoza", "Acceso a precordillera y circuitos panorámicos cortos"]
     },
     lujan: {
       title: "Luján de Cuyo",
-      region: ["Cuna del Malbec argentino.","Vinos elegantes, de taninos suaves."],
-      atracciones: ["Bodegas boutique y tradicionales","Paisajes de viñedos con la cordillera de fondo"],
+      region: ["Cuna del Malbec argentino.", "Vinos elegantes, de taninos suaves."],
+      atracciones: ["Bodegas boutique y tradicionales", "Paisajes de viñedos con la cordillera de fondo"],
       bodegas: ["Budeguer", "Piatelli", "De Ángeles", "Sottano"]
     },
     maipu: {
       title: "Maipú",
-      region: ["Zona histórica y fundacional.","Vinos con cuerpo, frutados."],
-      atracciones: ["Museo del vino y bodegas centenarias","Ciclovías y recorridos entre olivares y viñedos"],
+      region: ["Zona histórica y fundacional.", "Vinos con cuerpo, frutados."],
+      atracciones: ["Museo del vino y bodegas centenarias", "Ciclovías y recorridos entre olivares y viñedos"],
       bodegas: ["Cinco Sentidos", "Tempus Alba", "Casa Vigil – El Enemigo", "Alandes"]
     },
     uco: {
       title: "Valle de Uco",
-      region: ["Región más joven y moderna.","Vinos frescos, con gran expresión del terroir."],
-      atracciones: ["Enoturismo de alto nivel","Propuestas gourmet y experiencias inmersivas"],
+      region: ["Región más joven y moderna.", "Vinos frescos, con gran expresión del terroir."],
+      atracciones: ["Enoturismo de alto nivel", "Propuestas gourmet y experiencias inmersivas"],
       bodegas: ["Zaina (Familia Zaina)", "Tupungato Divino", "Bodega Rolland", "Tikal"]
     },
     sur: {
       title: "Sur mendocino",
-      region: ["San Rafael y General Alvear.","Clima continental; tintos amables y blancos expresivos."],
-      atracciones: ["Cañón del Atuel y río Diamante","Bodegas históricas y paisajes de oasis productivos"]
+      region: ["San Rafael y General Alvear.", "Clima continental; tintos amables y blancos expresivos."],
+      atracciones: ["Cañón del Atuel y río Diamante", "Bodegas históricas y paisajes de oasis productivos"]
     }
   };
 
   let svg = root.querySelector('.wm-lines');
   if (!svg) {
-    svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.classList.add('wm-lines');
     figure.appendChild(svg);
   }
 
-  dots.forEach(d=>{
+  dots.forEach(d => {
     const id = d.dataset.id;
     if (!svg.querySelector(`.wm-line[data-id="${id}"]`)) {
-      const p = document.createElementNS('http://www.w3.org/2000/svg','path');
+      const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       p.classList.add('wm-line');
       p.dataset.id = id;
       svg.appendChild(p);
@@ -824,9 +823,9 @@ function loadWithFallback(imgEl, paths) {
 
   let activeId = null;
 
-  function tpl(obj){
-    const reg = (obj.region||[]).join('<br>');
-    const atr = (obj.atracciones||[]).map(a => `<li>${a}</li>`).join('');
+  function tpl(obj) {
+    const reg = (obj.region || []).join('<br>');
+    const atr = (obj.atracciones || []).map(a => `<li>${a}</li>`).join('');
     const bod = obj.bodegas?.length
       ? `<div><strong>Bodegas que visitamos</strong><ul><li>${obj.bodegas.join('</li><li>')}</li></ul></div>`
       : '';
@@ -839,29 +838,29 @@ function loadWithFallback(imgEl, paths) {
       </div>`;
   }
 
-  function setPanel(id){
+  function setPanel(id) {
     const data = INFO[id] || INFO.lujan;
     infoBox.innerHTML = tpl(data);
     infoBox.classList.remove('is-anim');
-    requestAnimationFrame(()=>infoBox.classList.add('is-anim'));
+    requestAnimationFrame(() => infoBox.classList.add('is-anim'));
   }
 
-  function dotCenterPx(dot){
+  function dotCenterPx(dot) {
     const fr = figure.getBoundingClientRect();
     const dr = dot.getBoundingClientRect();
-    const cx = (dr.left + dr.width/2) - fr.left;
-    const cy = (dr.top + dr.height/2) - fr.top;
+    const cx = (dr.left + dr.width / 2) - fr.left;
+    const cy = (dr.top + dr.height / 2) - fr.top;
     return { cx, cy, w: fr.width, h: fr.height };
   }
 
-  function drawLines(){
+  function drawLines() {
     const fr = figure.getBoundingClientRect();
     svg.setAttribute('viewBox', `0 0 ${fr.width} ${fr.height}`);
-    svg.setAttribute('preserveAspectRatio','none');
-    svg.setAttribute('width','100%');
-    svg.setAttribute('height','100%');
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('height', '100%');
 
-    dots.forEach(dot=>{
+    dots.forEach(dot => {
       const id = dot.dataset.id;
       const path = svg.querySelector(`.wm-line[data-id="${id}"]`);
       if (!path) return;
@@ -869,35 +868,35 @@ function loadWithFallback(imgEl, paths) {
       const { cx, cy, w, h } = dotCenterPx(dot);
       const endX = w - Math.max(8, w * 0.02);
       const endY = cy;
-      const curve = (cy < h/2 ? -h*0.06 : h*0.06);
+      const curve = (cy < h / 2 ? -h * 0.06 : h * 0.06);
       const c1x = cx + (endX - cx) * 0.40;
       const c2x = cx + (endX - cx) * 0.85;
-      const dAttr = `M ${cx} ${cy} C ${c1x} ${cy+curve}, ${c2x} ${cy+curve}, ${endX} ${endY}`;
+      const dAttr = `M ${cx} ${cy} C ${c1x} ${cy + curve}, ${c2x} ${cy + curve}, ${endX} ${endY}`;
       path.setAttribute('d', dAttr);
     });
   }
 
-  function activate(id){
+  function activate(id) {
     activeId = id;
     setPanel(id);
-    dots.forEach(d => d.classList.toggle('is-active', d.dataset.id===id));
-    [...svg.querySelectorAll('.wm-line')].forEach(p=>{
+    dots.forEach(d => d.classList.toggle('is-active', d.dataset.id === id));
+    [...svg.querySelectorAll('.wm-line')].forEach(p => {
       const on = p.dataset.id === id;
       p.classList.toggle('is-active', on);
-      if (on){ p.classList.remove('draw'); void p.getBoundingClientRect(); p.classList.add('draw'); }
+      if (on) { p.classList.remove('draw'); void p.getBoundingClientRect(); p.classList.add('draw'); }
     });
   }
 
-  dots.forEach(d=>{
+  dots.forEach(d => {
     const id = d.dataset.id;
-    d.addEventListener('mouseenter', ()=>activate(id));
-    d.addEventListener('focus', ()=>activate(id));
-    d.addEventListener('click', ()=>activate(id));
+    d.addEventListener('mouseenter', () => activate(id));
+    d.addEventListener('focus', () => activate(id));
+    d.addEventListener('click', () => activate(id));
   });
 
-  const redraw = ()=>{ drawLines(); if (activeId) activate(activeId); };
-  window.addEventListener('resize', redraw, { passive:true });
-  window.addEventListener('orientationchange', redraw, { passive:true });
+  const redraw = () => { drawLines(); if (activeId) activate(activeId); };
+  window.addEventListener('resize', redraw, { passive: true });
+  window.addEventListener('orientationchange', redraw, { passive: true });
 
   drawLines();
   activate('lujan');
